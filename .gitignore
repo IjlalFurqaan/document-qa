@@ -7,6 +7,17 @@ __pycache__/
 # Vector store data
 vectorstore/
 
+# BM25 keyword index
+bm25_index/
+
+# Logs
+logs/
+*.log
+
 # IDE
 .vscode/
 .idea/
+
+# OS
+Thumbs.db
+.DS_Store
