@@ -6,7 +6,15 @@
 [![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_Store-FF6B6B?style=flat-square)](https://www.trychroma.com)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Web_UI-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
 
-> **Enterprise-grade RAG pipeline** that lets you ask natural language questions over your documents — powered by **hybrid search**, **LLM re-ranking**, **conversation memory**, and **confidence scoring**.
+## 📖 Introduction
+
+**DocQ** is an enterprise-grade **Retrieval-Augmented Generation (RAG)** pipeline that transforms the way you interact with your documents. Instead of manually searching through pages of PDFs, Word files, Markdown notes, or CSV datasets, you can simply ask a natural language question and receive a precise, source-cited answer in seconds.
+
+Modern organizations generate and store vast amounts of unstructured knowledge — policy documents, technical manuals, research papers, meeting notes, and more. Finding specific information buried inside these documents is often a time-consuming, frustrating process that involves keyword searches, manual skimming, and guesswork. **DocQ eliminates this friction** by indexing your documents into a searchable knowledge base and using Google's **Gemini 2.0 Flash** LLM to generate grounded, contextual answers.
+
+What sets DocQ apart from a naive "embed-and-query" setup is its **hybrid search architecture**. Rather than relying on a single retrieval strategy, DocQ combines **semantic vector search** (via ChromaDB and Google GenAI Embeddings) with **keyword-based BM25 search**, merging results through **Reciprocal Rank Fusion**. The fused results are then **re-ranked by Gemini itself**, ensuring that only the most relevant chunks are used for answer generation. This multi-stage retrieval pipeline dramatically improves answer quality, especially for queries that mix technical jargon with plain-language phrasing.
+
+DocQ also supports **conversation memory**, allowing you to ask follow-up questions that build on previous context — just like chatting with a knowledgeable colleague. Every answer is accompanied by a **confidence score** (HIGH / MEDIUM / LOW) and **source citations**, so you always know how reliable the response is and where to verify it. Whether you prefer a sleek **dark-mode web UI** built with Streamlit or a **rich terminal CLI** with tables and spinners, DocQ delivers a premium experience across both interfaces.
 
 ---
 
